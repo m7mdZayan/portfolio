@@ -304,7 +304,7 @@ h2 {
 // Projects
 
 .projects {
-  padding: 8rem;
+  padding: 8rem 0;
   background-color: var(--bg-panel);
 
   h2 {
@@ -339,13 +339,93 @@ h2 {
     grid-gap: 4rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin: 0 auto;
+    width: 90%;
 
     @media (min-width: 700px) {
-      width: 95%;
+      width: 85%;
     }
 
     &--item {
       overflow: hidden;
     }
   }
+}
+
+////////////////////////////////////////////
+// contacts
+
+.contact {
+  padding: 8rem 0;
+  background-color: var(--bg);
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  hr {
+    margin: 0 auto 6.4rem;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .icon {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin-right: 1.6rem;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.form__contianer {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+
+  @media (min-width: 750px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.form-item {
+  text-align: center;
+  margin-bottom: 1.6rem;
+  @media (min-width: 750px) {
+    flex-basis: 48%;
+  }
+
+  label {
+    position: absolute;
+    left: -1000px;
+  }
+  input,
+  textarea {
+    border: 2px solid var(--color-text);
+    min-width: 100px;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-family: inherit;
+    width: 100%;
+    outline: none;
+  }
+  textarea {
+    min-height: 200px;
+  }
+}
+
+.form__btn {
+  @extend .about__btn;
+  width: 20rem;
+  height: 4rem;
+  display: block;
+  margin: 3rem auto;
 }
