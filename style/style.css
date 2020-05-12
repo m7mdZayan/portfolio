@@ -12,7 +12,8 @@ html {
   --bg-panel: #ebebeb;
   --color-text: #333333;
   font-family: "Poppins", sans-serif;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 html[data-theme="dark"] {
   --bg: #333333;
@@ -22,6 +23,9 @@ html[data-theme="dark"] {
 .container {
   width: 90%;
   margin: 0 auto; }
+  @media (min-width: 700px) {
+    .container {
+      width: 85%; } }
 
 /****** HEADER ****/
 .header {
@@ -112,50 +116,29 @@ html[data-theme="dark"] {
   .header__checkbox:checked ~ .header__nav {
     transform: translateY(0); }
 
-/*
-
-&__hamburger {
-  position: relative;
-
-  &,
-  &::after,
-  &::before {
-    width: 3rem;
-    height: 3px;
-    display: inline-block;
-  }
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    transition: all 0.2s;
-    backface-visibility: hidden;
-  }
-  &::before {
-    top: -0.8rem;
-  }
-  &::after {
-    top: 0.8rem;
-  }
-}
-
-&__button:hover &__hamburger::before {
-  top: -1rem;
-}
-
-&__button:hover &__hamburger::after {
-  top: 1rem;
-}
-&__checkbox:checked + &__button &__hamburger {
-  background-color: transparent;
-}
-
-&__checkbox:checked + &__button &__hamburger::before {
-  transform: rotate(135deg);
-  top: 0;
-}
-
-*/
+.home {
+  height: calc(100vh - 40px);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(10, 20, 10, 0.8)), url(../assets/images/home.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff; }
+  .home__span {
+    font-size: 1.6rem;
+    font-weight: 200; }
+  .home h1 {
+    font-size: 6.4rem;
+    width: min-content;
+    text-align: center;
+    margin: 0.5rem auto 2rem;
+    text-transform: capitalize; }
+    @media (min-width: 700px) {
+      .home h1 {
+        width: 100%; } }
+  .home__subtitle {
+    font-size: 3.2rem;
+    text-transform: capitalize; }
 
 /*# sourceMappingURL=style.css.map */
