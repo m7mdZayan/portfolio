@@ -40,6 +40,7 @@ html[data-theme="dark"] {
 h2 {
   font-size: 3.2rem;
   color: var(--main-color);
+  text-transform: capitalize;
 }
 
 /****** HEADER ****/
@@ -216,7 +217,7 @@ h2 {
 
 .about {
   padding: 8rem 0;
-  background-color: var(--bg-panel);
+  background-color: var(--bg);
 
   &__container {
     display: flex;
@@ -237,6 +238,13 @@ h2 {
     width: 100%;
     margin-bottom: 3.2rem;
     max-height: 100%;
+    border-radius: 1rem;
+    transition: all 0.2s;
+
+    &:hover {
+      outline: 5px solid var(--main-color);
+      outline-offset: 1rem;
+    }
   }
 
   hr {
@@ -271,6 +279,7 @@ h2 {
     text-decoration: none;
     color: #fff;
     text-transform: capitalize;
+    font-size: 1.6rem;
     &:hover {
       border-radius: 2rem;
     }
@@ -281,6 +290,7 @@ h2 {
     }
   }
 }
+/////////////////////////////////////////////////////////
 
 .horizantal-line {
   width: 125px;
@@ -288,4 +298,54 @@ h2 {
   background-color: var(--main-color);
   border: none;
   border-radius: 50%;
+}
+
+//// //////////////////////////
+// Projects
+
+.projects {
+  padding: 8rem;
+  background-color: var(--bg-panel);
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  hr {
+    margin: 0 auto 6.4rem;
+  }
+  img {
+    max-width: 100%;
+    transition: transform 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .project__name {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-text);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 0 auto;
+
+    @media (min-width: 700px) {
+      width: 95%;
+    }
+
+    &--item {
+      overflow: hidden;
+    }
+  }
 }
