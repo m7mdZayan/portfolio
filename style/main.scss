@@ -216,6 +216,7 @@ h2 {
 
 .about {
   padding: 8rem 0;
+  background-color: var(--bg-panel);
 
   &__container {
     display: flex;
@@ -226,7 +227,6 @@ h2 {
     }
   }
   .img__container {
-    // height: 500px;
     @media (min-width: 700px) {
       flex-basis: 50%;
       margin-right: 4rem;
@@ -251,6 +251,7 @@ h2 {
       color: var(--main-color);
       font-size: 2.4rem;
       margin-bottom: 3.2rem;
+      text-transform: capitalize;
     }
   }
 
@@ -259,11 +260,32 @@ h2 {
       flex-basis: 50%;
     }
   }
+
+  &__btn {
+    background-color: var(--main-color);
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    &:hover {
+      border-radius: 2rem;
+    }
+    button {
+      @extend .about__btn;
+      width: 16rem;
+      padding: 2rem;
+    }
+  }
 }
 
 .horizantal-line {
   width: 125px;
   height: 5px;
   background-color: var(--main-color);
+  border: none;
   border-radius: 50%;
 }

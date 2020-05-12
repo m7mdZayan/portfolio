@@ -146,7 +146,8 @@ h2 {
     text-transform: capitalize; }
 
 .about {
-  padding: 8rem 0; }
+  padding: 8rem 0;
+  background-color: var(--bg-panel); }
   .about__container {
     display: flex;
     flex-direction: column; }
@@ -170,15 +171,32 @@ h2 {
     .about p span {
       color: var(--main-color);
       font-size: 2.4rem;
-      margin-bottom: 3.2rem; }
+      margin-bottom: 3.2rem;
+      text-transform: capitalize; }
   @media (min-width: 700px) {
     .about__info {
       flex-basis: 50%; } }
+  .about__btn, .about__btn button {
+    background-color: var(--main-color);
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize; }
+    .about__btn:hover, .about__btn button:hover {
+      border-radius: 2rem; }
+    .about__btn button {
+      width: 16rem;
+      padding: 2rem; }
 
 .horizantal-line {
   width: 125px;
   height: 5px;
   background-color: var(--main-color);
+  border: none;
   border-radius: 50%; }
 
 /*# sourceMappingURL=style.css.map */
