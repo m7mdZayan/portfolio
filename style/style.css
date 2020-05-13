@@ -51,7 +51,11 @@ footer {
 .header {
   background-color: var(--bg-panel);
   font-size: 1.6rem;
-  position: relative; }
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; }
   .header .container {
     display: flex;
     align-items: center;
@@ -140,7 +144,7 @@ footer {
     transform: translateY(0); }
 
 .home {
-  height: calc(100vh - 40px);
+  height: 100vh;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(10, 20, 10, 0.8)), url(../assets/images/home.jpg);
   background-size: cover;
   display: flex;
