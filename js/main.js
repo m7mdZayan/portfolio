@@ -5,26 +5,20 @@ const orangeBtn = document.querySelector(".orange");
 const violetBtn = document.querySelector(".violet");
 const brownBtn = document.querySelector(".brown");
 const root = document.documentElement;
+const colorCircles = Array.from(
+  document.querySelectorAll(".setting__box--grid--item")
+);
 
-redBtn.addEventListener("click", () => {
-  root.style.setProperty("--main-color", "#e65f78");
-});
-greenBtn.addEventListener("click", () => {
-  root.style.setProperty("--main-color", "#31b164");
-});
-blueBtn.addEventListener("click", () => {
-  root.style.setProperty("--main-color", "#5d69f6");
-});
-orangeBtn.addEventListener("click", () => {
-  root.style.setProperty("--main-color", "#f2b31a");
-});
-violetBtn.addEventListener("click", () => {
-  root.style.setProperty("--main-color", "#87ceeb");
-});
-brownBtn.addEventListener("click", () => {
-  root.style.setProperty("--main-color", "#795548");
-});
+const changeMainColor = (e) => {
+  const color = e.target.getAttribute("color");
+  root.style.setProperty("--main-color", color);
+};
 
+for (let i = 0; i < colorCircles.length; i++) {
+  colorCircles[i].addEventListener("click", changeMainColor);
+}
+
+redBtn.addEventListener("click", changeMainColor);
 ////////////////////////////
 //dark mode
 var checkbox = document.querySelector("input[name=theme]");
