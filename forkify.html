@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fokify Project</title>
+    <!-- Google font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/project.css" />
+  </head>
+  <body>
+    <!-- Header Starts  -->
+
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">
+          <a href="index.html">zayan</a>
+        </div>
+
+        <input type="checkbox" class="header__checkbox" id="nav-toggler" />
+
+        <label
+          for="nav-toggler"
+          class="header__button"
+          aria-label="navigation toggler"
+        >
+          <span class="header__hamburger"> </span>
+        </label>
+
+        <nav class="header__nav">
+          <ul>
+            <a href="index.html#home" class="header__nav--item">home</a>
+          </ul>
+          <ul>
+            <a href="index.html#about" class="header__nav--item">about</a>
+          </ul>
+          <ul>
+            <a href="index.html#projects" class="header__nav--item">projects</a>
+          </ul>
+          <ul>
+            <a href="index.html#contacts" class="header__nav--item">contacts</a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Header ends  -->
+
+    <!-- Project section starts-->
+    <section class="project">
+      <div class="container project__container">
+        <div class="img__container">
+          <img
+            src="./assets//images/pro1.jpg"
+            class="about__img"
+            alt="Mohamed Zayan"
+          />
+        </div>
+        <div class="project__info">
+          <h2>forkify</h2>
+          <hr class="horizantal-line" />
+          <p>
+            a website to search over 1,000,000 recipes from different
+            restaurants (it's a practice on using npm, es modules, babel and
+            async js)
+          </p>
+
+          <a
+            class="project__btn"
+            target="_blank"
+            href="https://zforkify.netlify.app/"
+          >
+            <button>check project</button></a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Project section ends-->
+
+    <!--Footer-->
+    <footer>
+      <p>all rights are reserved &copy;</p>
+    </footer>
+
+    <!-- setting box -->
+    <input type="checkbox" id="setting__checkbox" />
+    <label class="setting" for="setting__checkbox">
+      <div>
+        <img src="./assets/svg/setting.svg" alt="setting" />
+      </div>
+    </label>
+
+    <div class="setting__box">
+      <p>select your color</p>
+      <div class="setting__box--grid">
+        <span class="setting__box--grid--item red" color="#e65f78"></span>
+        <span class="setting__box--grid--item blue" color="#5d69f6"></span>
+        <span class="setting__box--grid--item green" color="#31b164"></span>
+        <span class="setting__box--grid--item orange" color="#f2b31a"></span>
+        <span class="setting__box--grid--item violet" color="#87ceeb"></span>
+        <span class="setting__box--grid--item brown" color="#795548"></span>
+      </div>
+
+      <div class="toggle-container">
+        <p>dark mode</p>
+        <input type="checkbox" id="switch" name="theme" />
+        <label for="switch">Toggle</label>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
