@@ -19,8 +19,9 @@ for (let i = 0; i < colorCircles.length; i++) {
 }
 
 redBtn.addEventListener("click", changeMainColor);
+
 ////////////////////////////
-//dark mode
+//dark mode toggler
 var checkbox = document.querySelector("input[name=theme]");
 
 checkbox.addEventListener("change", function () {
@@ -39,3 +40,10 @@ let trans = () => {
     document.documentElement.classList.remove("transition");
   }, 1000);
 };
+
+///////////////////////////////////////////
+// Loading spinner
+window.addEventListener("load", function () {
+  const loader = document.querySelector(".loadingPage");
+  loader.className += " hidden";
+});
