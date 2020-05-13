@@ -101,7 +101,10 @@ h2 {
       color: var(--color-text);
       display: inline-block;
       margin-top: 1rem;
-      text-transform: capitalize; }
+      text-transform: capitalize;
+      transition: all 0.2s; }
+      .header__nav--item:hover, .header__nav--item:active {
+        color: var(--main-color); }
       @media (min-width: 700px) {
         .header__nav--item {
           margin: 0;
@@ -305,5 +308,99 @@ footer {
   text-align: center;
   font-size: 1.6rem;
   text-transform: capitalize; }
+
+.setting {
+  background-color: #ebebeb;
+  width: 30px;
+  position: fixed;
+  top: 30rem;
+  left: 0;
+  transition: all 0.3s;
+  cursor: pointer; }
+  .setting img {
+    width: 100%; }
+
+.setting__box {
+  width: 200px;
+  font-size: 1.6rem;
+  text-align: center;
+  position: relative;
+  background-color: var(--bg-panel);
+  color: var(--color-text);
+  position: fixed;
+  top: 30rem;
+  padding: 2rem;
+  transform: translateX(-200px);
+  transition: all 0.3s; }
+  .setting__box--grid {
+    margin: 1rem auto;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-gap: 1rem; }
+    .setting__box--grid--item {
+      min-width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer; }
+
+#setting__checkbox:checked ~ .setting__box {
+  transform: translateX(0); }
+
+#setting__checkbox:checked ~ .setting {
+  left: 200px; }
+
+input[type="checkbox"] {
+  display: none; }
+
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden; }
+
+label[for="switch"] {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative; }
+  label[for="switch"]::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s; }
+
+#switch:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%); }
+
+#switchinput:checked + label {
+  background: var(--main-color); }
+
+.red {
+  background-color: #e65f78; }
+
+.blue {
+  background-color: #5d69f6; }
+
+.green {
+  background-color: #31b164; }
+
+.orange {
+  background-color: #f2b31a; }
+
+.violet {
+  background-color: #87ceeb; }
+
+.brown {
+  background-color: #795548; }
 
 /*# sourceMappingURL=style.css.map */

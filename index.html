@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,7 +22,11 @@
 
         <input type="checkbox" class="header__checkbox" id="nav-toggler" />
 
-        <label for="nav-toggler" class="header__button">
+        <label
+          for="nav-toggler"
+          class="header__button"
+          aria-label="navigation toggler"
+        >
           <span class="header__hamburger"> </span>
         </label>
 
@@ -103,42 +107,42 @@
           <div class="projects__grid--item">
             <a href="#">
               <h3 class="project__name">forkify</h3>
-              <img src="./assets/images/pro1.jpg" />
+              <img src="./assets/images/pro1.jpg" alt="forkify" />
             </a>
           </div>
 
           <div class="projects__grid--item">
             <a href="#">
               <h3 class="project__name">budgety</h3>
-              <img src="./assets/images/pro2.jpg" />
+              <img src="./assets/images/pro2.jpg" alt="budgety" />
             </a>
           </div>
 
           <div class="projects__grid--item">
             <a href="#">
               <h3 class="project__name">nexter</h3>
-              <img src="./assets/images/pro3.jpg" />
+              <img src="./assets/images/pro3.jpg" alt="nexter" />
             </a>
           </div>
 
           <div class="projects__grid--item">
             <a href="#">
               <h3 class="project__name">tempro</h3>
-              <img src="./assets/images/pro4.jpg" />
+              <img src="./assets/images/pro4.jpg" alt="tempro" />
             </a>
           </div>
 
           <div class="projects__grid--item">
             <a href="#">
               <h3 class="project__name">curey</h3>
-              <img src="./assets/images/pro5.jpg" />
+              <img src="./assets/images/pro5.jpg" alt="curey" />
             </a>
           </div>
 
           <div class="projects__grid--item">
             <a href="#">
               <h3 class="project__name">burger builder</h3>
-              <img src="./assets/images/pro6.jpg" />
+              <img src="./assets/images/pro6.jpg" alt="burger builder" />
             </a>
           </div>
         </div>
@@ -184,16 +188,21 @@
           </form>
           <nav>
             <a href="https://github.com/m7mdZayan" target="_blank" class="icon">
-              <img src="assets/svg/github.svg" />
-              </svg>
+              <img src="assets/svg/github.svg" alt="github icon" />
             </a>
-            <a href="https://www.linkedin.com/in/mohamed-zayan-1907/" target="_blank" class="icon">
-              <img src="assets/svg/linkedin.svg" />
-              </svg>
+            <a
+              href="https://www.linkedin.com/in/mohamed-zayan-1907/"
+              target="_blank"
+              class="icon"
+            >
+              <img src="assets/svg/linkedin.svg" alt="linkedin icon" />
             </a>
-            <a href="https://twitter.com/M7mdZayan74" target="_blank" class="icon">
-              <img src="assets/svg/twitter.svg" />
-              </svg>
+            <a
+              href="https://twitter.com/M7mdZayan74"
+              target="_blank"
+              class="icon"
+            >
+              <img src="assets/svg/twitter.svg" alt="twitter icon" />
             </a>
           </nav>
         </div>
@@ -202,8 +211,34 @@
     </main>
 
     <footer>
-      <p>all rights are reserved &copy; </p>
+      <p>all rights are reserved &copy;</p>
     </footer>
+
+    <input type="checkbox" id="setting__checkbox" />
+    <label class="setting" for="setting__checkbox">
+      <div>
+        <img src="./assets/svg/setting.svg" alt="setting" />
+      </div>
+    </label>
+
+    <div class="setting__box">
+      <p>select your color</p>
+      <div class="setting__box--grid">
+        <span class="setting__box--grid--item red"></span>
+        <span class="setting__box--grid--item blue"></span>
+        <span class="setting__box--grid--item green"></span>
+        <span class="setting__box--grid--item orange"></span>
+        <span class="setting__box--grid--item violet"></span>
+        <span class="setting__box--grid--item brown"></span>
+      </div>
+
+      <div class="toggle-container">
+        <p>dark mode</p>
+        <input type="checkbox" id="switch" name="theme" />
+        <label for="switch">Toggle</label>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
-
