@@ -1,0 +1,134 @@
+/****** HEADER ****/
+.header {
+  background-color: var(--bg-panel);
+  font-size: 1.6rem;
+  position: relative;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    a {
+      text-decoration: none;
+      font-size: 2rem;
+      text-transform: capitalize;
+      color: var(--main-color);
+    }
+  }
+
+  input {
+    display: none;
+  }
+
+  &__button {
+    width: 4rem;
+    height: 4rem;
+    z-index: 10;
+    box-shadow: 0 1rem 2rem rgba(#333, 0.05);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+
+    @media (min-width: 700px) {
+      display: none;
+    }
+  }
+
+  &__hamburger {
+    position: relative;
+
+    &,
+    &::after,
+    &::before {
+      width: 3rem;
+      height: 3px;
+      display: inline-block;
+      background-color: var(--color-text);
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+      backface-visibility: hidden;
+    }
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    padding: 25px;
+    background-color: var(--bg-panel);
+    width: 100%;
+    transform: translateY(-150%);
+    transition: all 0.2s;
+
+    @media (min-width: 700px) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translateY(0);
+      flex-direction: row;
+      margin-left: auto;
+      width: auto;
+    }
+
+    &--item {
+      text-decoration: none;
+      color: var(--color-text);
+      display: inline-block;
+      margin-top: 1rem;
+      text-transform: capitalize;
+      transition: all 0.2s;
+
+      &:hover,
+      &:active {
+        color: var(--main-color);
+      }
+
+      @media (min-width: 700px) {
+        margin: 0;
+        margin-left: 4rem;
+      }
+    }
+  }
+
+  &__button:hover &__hamburger::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__hamburger::after {
+    top: 1rem;
+  }
+  &__checkbox:checked + &__button &__hamburger {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__hamburger::before {
+    transform: rotate(135deg);
+    top: 0;
+  }
+  &__checkbox:checked + &__button &__hamburger::after {
+    transform: rotate(-135deg);
+    top: 0rem;
+  }
+
+  &__checkbox:checked ~ &__nav {
+    transform: translateY(0);
+  }
+}
+
+////////////////////////////////////////////////////

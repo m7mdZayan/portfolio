@@ -32,6 +32,21 @@ h2 {
   color: var(--main-color);
   text-transform: capitalize; }
 
+.horizantal-line {
+  width: 125px;
+  height: 5px;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 50%; }
+
+footer {
+  background-color: var(--bg-panel);
+  padding: 3rem;
+  color: var(--color-text);
+  text-align: center;
+  font-size: 1.6rem;
+  text-transform: capitalize; }
+
 /****** HEADER ****/
 .header {
   background-color: var(--bg-panel);
@@ -202,13 +217,6 @@ h2 {
       width: 16rem;
       padding: 2rem; }
 
-.horizantal-line {
-  width: 125px;
-  height: 5px;
-  background-color: var(--main-color);
-  border: none;
-  border-radius: 50%; }
-
 .projects {
   padding: 8rem 0;
   background-color: var(--bg-panel); }
@@ -300,14 +308,6 @@ h2 {
   height: 4rem;
   display: block;
   margin: 3rem auto; }
-
-footer {
-  background-color: var(--bg-panel);
-  padding: 3rem;
-  color: var(--color-text);
-  text-align: center;
-  font-size: 1.6rem;
-  text-transform: capitalize; }
 
 .setting {
   background-color: #ebebeb;
